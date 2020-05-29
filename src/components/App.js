@@ -7,8 +7,6 @@ const accessKey = config.access_key;
 const secretKey = config.secret_key;
 
 class App extends React.Component {
-
-	
 	
 	onSearchSubmit(term){
 		axios.get('https://api.unsplash.com/search/photos',{
@@ -16,6 +14,9 @@ class App extends React.Component {
 			headers:{
 				Authorization: 'Client-ID ' + accessKey
 			}
+		})
+		.then(response => {
+			console.log(response.data.results);
 		});
 	}
 
