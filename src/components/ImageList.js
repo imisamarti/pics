@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ImageList = () => {
+const ImageList = props => {
 
-	return (
-		<div>Dime ave</div>
-		);
+console.log(props.images);
+
+	return <div>ImageList</div>;
 };
 
 export default ImageList;
